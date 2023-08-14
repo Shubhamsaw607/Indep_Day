@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Independence Day!</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  #container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  #independenceDayImage {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  #message {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #333;
+  }
+  #audioControl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  #audioButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  #audioMessage {
+    font-size: 14px;
+    color: #777;
+  }
+  #info {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #info h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+  }
+  #imageRow {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+  }
+</style>
+</head>
+<body>
+<div id="container">
+  <img id="independenceDayImage" src="independence_day.jpg" alt="Independence Day">
+  <p id="message">Happy Independence Day!</p>
+  <div id="audioControl">
+    <audio id="backgroundAudio" loop>
+      <source src="independence_song.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <button id="audioButton" onclick="toggleAudio()">Play</button>
+  </div>
+  <div id="info">
+    <h2>Independence Day</h2>
+    <p> Independence Day is celebrated annually on 15 August as a public holiday in India commemorating the nation's independence from the United Kingdom on 15 August 1947, the day when the provisions of the Indian Independence Act, which transferred legislative sovereignty to the Indian Constituent Assembly, came into effect. India retained King George VI as head of state until its transition to a republic, when the Constitution of India came into effect on 26 January 1950 (celebrated as Indian Republic Day) and replaced the dominion prefix, Dominion of India, with the enactment of the sovereign law Constitution of India. India attained independence following the independence movement noted for largely non-violent resistance and civil disobedience.
+
+        Independence coincided with the partition of India, in which British India was divided along religious lines into the Dominions of India and Pakistan; the partition was accompanied by violent riots and mass casualties, and the displacement of nearly 15 million people due to religious violence. On 15 August 1947, the first Prime Minister of India, Jawaharlal Nehru raised the Indian national flag above the Lahori Gate of the Red Fort in Delhi. On each subsequent Independence Day, the incumbent Prime Minister customarily raises the flag and gives an address to the nation. The entire event is broadcast by Doordarshan, India's national broadcaster, and usually begins with the shehnai music of Ustad Bismillah Khan. Independence Day is observed throughout India with flag-hoisting ceremonies, parades and cultural events. It is a national holiday.<p>India retained King George VI as head of state until its transition to a republic on 26 January 1950.</p>
+    <h2>History</h2>
+    <p>European traders had established outposts in the Indian subcontinent by the late 17th century. Through overwhelming military strength, the East India Company fought and annexed local kingdoms and established themselves as the dominant force by the 18th century. Following the Indian Rebellion of 1857, the Government of India Act 1858 led the British Crown to assume direct control of India. In the decades following, civic society gradually emerged across India, most notably the Indian National Congress Party, formed in 1885. The period after World War I was marked by colonial reforms such as the Montagu–Chelmsford Reforms, but it also witnessed the enactment of the unpopular Rowlatt Act and calls for self-rule by Indian activists. The discontent of this period crystallised into nationwide non-violent movements of non-cooperation and civil disobedience, led by Mohandas Karamchand Gandhi.
+
+        During the 1930s, the reform was gradually legislated by the British; Congress won victories in the resulting elections. The next decade was beset with political turmoil: Indian participation in World War II, the Congress' final push for non-cooperation, and an upsurge of Muslim nationalism led by the All-India Muslim League. The escalating political tension was capped by Independence in 1947. The jubilation was tempered by the bloody partition of colonial India into India and Pakistan.</p>
+  </div>
+  <div id="imageRow">
+    <img class="image" src="independence_day5.jpg" alt="Image 1">
+    <img class="image" src="independence_day4.jpg" alt="Image 2">
+  </div>
+  <div id="imageRow">
+    <img class="image" src="independence_day3.jpg" alt="Image 3">
+    <img class="image" src="independence_day1.jpg" alt="Image 4">
+  </div>
+  <div id="imageRow">
+    <img class="image" src="independence_day2.jpg" alt="Image 5">
+  </div>
+</div>
+<script>
+  const audio = document.getElementById('backgroundAudio');
+  const audioButton = document.getElementById('audioButton');
+
+  function toggleAudio() {
+    if (audio.paused) {
+      audio.play();
+      audioButton.textContent = 'Pause';
+    } else {
+      audio.pause();
+      audioButton.textContent = 'Play';
+    }
+  }
+</script>
+</body>
+</html>
